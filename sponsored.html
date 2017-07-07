@@ -1,0 +1,23 @@
+---
+layout: default
+title: Edsurge Sponsored Content
+---
+
+<h2>Who's Paying for Posts in Edsurge?</h2>
+
+<!-- Organizations -->
+{% assign sponsors = site.data.sponsors %}
+{% assign sponsors = sponsors | sort:"Name" %}
+
+<!-- Document -->
+
+{% for sponsor in sponsors %}
+
+<p><strong>{{ sponsor.Name }}</strong>:
+
+<p><a href="{{ sponsor.URL }}">{{ sponsor.Headline }}</a>), {{ sponsor.Date }}
+
+<hr >
+
+{% endfor %}
+
